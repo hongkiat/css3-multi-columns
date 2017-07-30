@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>CSS3 Multi-column Layout - Hongkiat.com</title>
+
+<!--  jquery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../_nav/js/jquery.js"><\/script>')</script>
+
+<!-- demo scripts -->
+<link rel="stylesheet" href="normalize.css">
+	<style type="text/css" media="screen">
+		body {
+			background-color: #f3f3f3;
+		}
+		.demo-wrapper article, section {
+			width: 600px;
+			margin: 50px auto;
+			color: #555;
+			padding: 20px;
+		}
+		.demo-wrapper h1 {
+			margin-top: 0;
+		}
+		.demo-wrapper article:target {
+			background-color: #eaeaea;
+		}
+		/*the columns*/
+		.demo-wrapper article:nth-of-type(1) {
+			-webkit-column-count:2;
+			-moz-column-count:2;
+			column-count:2;
+		}
+		.demo-wrapper article:nth-of-type(2) {
+			-webkit-column-width: 150px;
+			-moz-column-width: 150px;
+			column-width: 150px;
+		}
+		.demo-wrapper article:nth-of-type(3) {
+			-webkit-column-width: 150px;
+			-moz-column-width: 150px;
+			column-width: 150px;
+
+			-webkit-column-gap: 50px;
+			-moz-column-gap: 50px;
+			column-gap: 50px;
+		}
+		.demo-wrapper article:nth-of-type(4) {
+			-webkit-column-width: 150px;
+			-moz-column-width: 150px;
+			column-width: 150px;
+
+			-webkit-column-gap: 50px;
+			-moz-column-gap: 50px;
+			column-gap: 50px;
+
+			-moz-column-rule: 1px dotted #ccc;
+			-webkit-column-rule: 1px dotted #ccc;
+			column-rule: 1px dotted #ccc;
+		}
+		.demo-wrapper article:nth-of-type(5) {
+			-webkit-column-width: 150px;
+			-moz-column-width: 150px;
+			column-width: 150px;
+
+			-webkit-column-gap: 50px;
+			-moz-column-gap: 50px;
+			column-gap: 50px;
+
+			-moz-column-rule: 1px dotted #ccc;
+			-webkit-column-rule: 1px dotted #ccc;
+			column-rule: 1px dotted #ccc;
+		}
+		.demo-wrapper article:nth-of-type(5) h1 {
+				-webkit-column-span: all;
+				column-span:all;
+		}
+	</style>
+
+<!-- nav script -->
+<script src="../_nav/js/nav.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<!-- nav meta -->
+<div class="demo-meta">
+	<h1 class="demo-title">CSS3 Multi-column Layout</h1>
+	<p class="demo-desc">Today, we can layout the web content into column more seamlessly with CSS3 Column. This demo shows how to create it.
+  	</p>
+</div>
+
+<!-- demo content -->
+<div class="demo-wrapper">
+<article id="article-1">
+<h1>Column Count</h1>
+
+Consectetur adipiscing elit. Nunc libero magna, venenatis quis aliquet et, rutrum in augue. Donec vel tempor dolor. Donec volutpat fringilla porta. Suspendisse non nulla tortor. Quisque commodo ornare mi, sit amet aliquet justo bibendum non. Integer bibendum convallis sapien, sit amet tincidunt orci placerat in. Integer vitae consequat augue.
+
+Nulla facilisi. Praesent a nunc purus, nec feugiat velit. Mauris nisl sem, porta id luctus a, rhoncus sed mi. Nullam mattis blandit dui, vel pretium sem scelerisque et. Integer ullamcorper vehicula laoreet. Nulla pellentesque, metus a pretium euismod, libero elit vestibulum erat, at tempus odio magna non elit. Vestibulum vulputate nunc eget massa sollicitudin a imperdiet purus pretium. Ut nec enim vitae massa dictum cursus et et elit.
+</article>
+<section>
+<h3>Code</h3>
+<pre>
+article {
+	-webkit-column-count:2;
+	-moz-column-count:2;
+	column-count:2;
+}
+</pre>
+</section>
+
+<hr>
+
+<article id="article-2">
+<h1>Column Width</h1>
+
+Consectetur adipiscing elit. Nunc libero magna, venenatis quis aliquet et, rutrum in augue. Donec vel tempor dolor. Donec volutpat fringilla porta. Suspendisse non nulla tortor. Quisque commodo ornare mi, sit amet aliquet justo bibendum non. Integer bibendum convallis sapien, sit amet tincidunt orci placerat in. Integer vitae consequat augue.
+
+Nulla facilisi. Praesent a nunc purus, nec feugiat velit. Mauris nisl sem, porta id luctus a, rhoncus sed mi. Nullam mattis blandit dui, vel pretium sem scelerisque et. Integer ullamcorper vehicula laoreet. Nulla pellentesque, metus a pretium euismod, libero elit vestibulum erat, at tempus odio magna non elit. Vestibulum vulputate nunc eget massa sollicitudin a imperdiet purus pretium. Ut nec enim vitae massa dictum cursus et et elit.
+</article>
+<section>
+<h3>Code</h3>
+<pre>
+article {
+	-webkit-column-width: 150px;
+	-moz-column-width: 150px;
+	column-width: 150px;
+}
+</pre>
+</section>
+
+<hr>
+
+<article id="article-3">
+<h1>Column Gap</h1>
+
+Consectetur adipiscing elit. Nunc libero magna, venenatis quis aliquet et, rutrum in augue. Donec vel tempor dolor. Donec volutpat fringilla porta. Suspendisse non nulla tortor. Quisque commodo ornare mi, sit amet aliquet justo bibendum non. Integer bibendum convallis sapien, sit amet tincidunt orci placerat in. Integer vitae consequat augue.
+
+Nulla facilisi. Praesent a nunc purus, nec feugiat velit. Mauris nisl sem, porta id luctus a, rhoncus sed mi. Nullam mattis blandit dui, vel pretium sem scelerisque et. Integer ullamcorper vehicula laoreet. Nulla pellentesque, metus a pretium euismod, libero elit vestibulum erat, at tempus odio magna non elit. Vestibulum vulputate nunc eget massa sollicitudin a imperdiet purus pretium. Ut nec enim vitae massa dictum cursus et et elit.
+</article>
+<section>
+<h3>Code</h3>
+<pre>
+article {
+	-webkit-column-width: 150px;
+	-moz-column-width: 150px;
+	column-width: 150px;
+	/*column gap*/
+	-webkit-column-gap: 30px;
+	-moz-column-gap: 30px;
+	column-gap: 30px;
+}
+</pre>
+</section>
+
+<article id="article-4">
+<h1>Column Rule</h1>
+
+Consectetur adipiscing elit. Nunc libero magna, venenatis quis aliquet et, rutrum in augue. Donec vel tempor dolor. Donec volutpat fringilla porta. Suspendisse non nulla tortor. Quisque commodo ornare mi, sit amet aliquet justo bibendum non. Integer bibendum convallis sapien, sit amet tincidunt orci placerat in. Integer vitae consequat augue.
+
+Nulla facilisi. Praesent a nunc purus, nec feugiat velit. Mauris nisl sem, porta id luctus a, rhoncus sed mi. Nullam mattis blandit dui, vel pretium sem scelerisque et. Integer ullamcorper vehicula laoreet. Nulla pellentesque, metus a pretium euismod, libero elit vestibulum erat, at tempus odio magna non elit. Vestibulum vulputate nunc eget massa sollicitudin a imperdiet purus pretium. Ut nec enim vitae massa dictum cursus et et elit.
+</article>
+<section>
+<h3>Code</h3>
+<pre>
+article {
+	-webkit-column-width: 150px;
+	-moz-column-width: 150px;
+	column-width: 150px;
+
+	-webkit-column-gap: 50px;
+	-moz-column-gap: 50px;
+	column-gap: 50px;
+
+	-moz-column-rule: 1px dotted #ccc;
+	-webkit-column-rule: 1px dotted #ccc;
+	column-rule: 1px dotted #ccc;
+}
+</pre>
+</section>
+
+<article id="article-5">
+<h1>This is the Column Span Demo</h1>
+
+Consectetur adipiscing elit. Nunc libero magna, venenatis quis aliquet et, rutrum in augue. Donec vel tempor dolor. Donec volutpat fringilla porta. Suspendisse non nulla tortor. Quisque commodo ornare mi, sit amet aliquet justo bibendum non. Integer bibendum convallis sapien, sit amet tincidunt orci placerat in. Integer vitae consequat augue.
+
+Nulla facilisi. Praesent a nunc purus, nec feugiat velit. Mauris nisl sem, porta id luctus a, rhoncus sed mi. Nullam mattis blandit dui, vel pretium sem scelerisque et. Integer ullamcorper vehicula laoreet. Nulla pellentesque, metus a pretium euismod, libero elit vestibulum erat, at tempus odio magna non elit. Vestibulum vulputate nunc eget massa sollicitudin a imperdiet purus pretium. Ut nec enim vitae massa dictum cursus et et elit.
+</article>
+<section>
+<h3>Code</h3>
+<pre>
+article h1 {
+	-webkit-column-span: all;
+	column-span:all;
+}
+</pre>
+</section>
+</div>
+
+</body>
+</html>
